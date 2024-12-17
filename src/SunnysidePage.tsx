@@ -116,10 +116,10 @@ export function SunnysidePage() {
             <a className=" hover:text-white" href="#projects">Projects</a>
           </div>
           <div className="flex justify-items-center object-contain gap-6 mt-24 max-md:mt-10">
-            <a  className=" max-w-full " href="#facebook"><img className="aspect-[8.2]  hover:brightness-0 hover:invert transition-all" loading="lazy" src="/images/icon-facebook.svg" /></a>
-            <a  className=" max-w-full " href="#facebook"><img className="aspect-[8.2]  hover:brightness-0 hover:invert transition-all" loading="lazy" src="/images/icon-instagram.svg" /></a>
-            <a  className=" max-w-full " href="#facebook"><img className="aspect-[8.2]  hover:brightness-0 hover:invert transition-all" loading="lazy" src="/images/icon-pinterest.svg" /></a>
-            <a  className=" max-w-full " href="#facebook"><img className="aspect-[8.2]  hover:brightness-0 hover:invert transition-all" loading="lazy" src="/images/icon-twitter.svg" /></a>
+            <a  className=" max-w-full " href="#facebook"><img className="aspect-[8.2]  hover:brightness-0 hover:invert transition-all" alt="Social media links" loading="lazy" src="/images/icon-facebook.svg" /></a>
+            <a  className=" max-w-full " href="#facebook"><img className="aspect-[8.2]  hover:brightness-0 hover:invert transition-all" alt="Social media links" loading="lazy" src="/images/icon-instagram.svg" /></a>
+            <a  className=" max-w-full " href="#facebook"><img className="aspect-[8.2]  hover:brightness-0 hover:invert transition-all" alt="Social media links" loading="lazy" src="/images/icon-pinterest.svg" /></a>
+            <a  className=" max-w-full " href="#facebook"><img className="aspect-[8.2]  hover:brightness-0 hover:invert transition-all" alt="Social media links" loading="lazy" src="/images/icon-twitter.svg" /></a>
           </div>
         </nav>
       </footer>
