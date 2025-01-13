@@ -22,5 +22,5 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "types.ts", "vite-env.d.ts", "types", "public/sunnyside", "src/__tests__"]
+  "include": ["src", "types.ts", "vite-env.d.ts", "types", "public/sunnyside", "src/__tests__","src/types/**/*"]
 }

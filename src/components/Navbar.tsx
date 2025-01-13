@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { NavItem } from "../types";
 
 const navItems: NavItem[] = [
@@ -12,6 +12,26 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeItem, setActiveItem] = useState<string | null>(null);
 
+  useEffect(() =>{
+    const handleCloseMenu = () => {
+      if(isOpen) {
+        setIsOpen(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleCloseMenu);
+    window.addEventListener('resize', handleCloseMenu);
+
+    return () => {
+      window.addEventListener('scroll', handleCloseMenu);
+      window.addEventListener('resize', handleCloseMenu);
+    };
+  }, [isOpen]);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <nav className="flex relative gap-5 justify-between self-stretch w-full text-lg font-semibold tracking-normal leading-none max-md:max-w-full">
       <a href="/" className="flex justify-center" aria-label="Home">
@@ -23,16 +43,17 @@ export function Navbar() {
         />
       </a>
 
-      <button
-        className="hidden max-md:block"
-        onClick={() => setIsOpen(!isOpen)}
-        aria-expanded={isOpen}
-        aria-label="Toggle navigation menu"
-      >
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
-          <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
-        </svg>
-      </button>
+      <div 
+          className={`md:hidden tham tham-e-squeeze tham-w-6 ${isOpen ? 'tham-active' : ''}`}
+          onClick={toggleMenu}
+          aria-expanded={isOpen}
+          aria-label="Toggle navigation menu"
+        >
+          <div className="tham-box">
+            <div className="tham-inner" />
+          </div>
+        </div>
+
 
       <div
         className={`flex gap-1 md:gap-4 items-center z-10 transition-all duration-300 ease-in-out transform
